@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hour Choice Restaurant</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#111;
+color:white;
+}
+
+header{
+position:fixed;
+width:100%;
+top:0;
+left:0;
+background:#000;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 60px;
+z-index:1000;
+box-shadow:0 3px 10px rgba(0,0,0,.6);
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+color:#ff3b3b;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+transition:.4s;
+}
+
+nav a:hover{
+color:#ff3b3b;
+}
+
+.hero{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),
+url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=80");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:60px;
+color:#ff3b3b;
+}
+
+.hero p{
+margin:20px 0;
+font-size:20px;
+}
+
+.btn{
+background:#8B4513;
+color:white;
+padding:15px 30px;
+border:none;
+cursor:pointer;
+font-size:18px;
+border-radius:30px;
+transition:.4s;
+}
+
+.btn:hover{
+background:#ff3b3b;
+}
+
+section{
+padding:90px 60px;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+color:#ff3b3b;
+margin-bottom:40px;
+}
+
+.about{
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+align-items:center;
+}
+
+.about img{
+width:450px;
+max-width:100%;
+border-radius:10px;
+}
+
+.about-text{
+flex:1;
+font-size:18px;
+line-height:1.8;
+}
+
+.menu{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#222;
+border-radius:10px;
+overflow:hidden;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card h3{
+padding:15px;
+color:#ff3b3b;
+}
+
+.card p{
+padding:0 15px 15px;
+}
+
+.price{
+padding:15px;
+font-size:22px;
+color:#8B4513;
+font-weight:bold;
+}
+
+.contact{
+text-align:center;
+}
+
+input,textarea{
+width:80%;
+padding:15px;
+margin:10px;
+border:none;
+border-radius:5px;
+}
+
+footer{
+background:black;
+padding:20px;
+text-align:center;
+margin-top:40px;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+padding:20px;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.about{
+flex-direction:column;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">Hour Choice</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#menu">Menu</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<div>
+<h1>Hour Choice Restaurant</h1>
+
+<p>Delicious Food | Best Taste | Fresh Ingredients</p>
+
+<button class="btn" onclick="welcome()">Book a Table</button>
+
+</div>
+</section>
+
+<section id="about">
+
+<h2 class="title">About Us</h2>
+
+<div class="about">
+
+<img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80">
+
+<div class="about-text">
+
+<p>
+Welcome to <b>Hour Choice Restaurant</b>. We serve delicious food
+prepared by experienced chefs using fresh ingredients.
+Our mission is to provide unforgettable dining experiences.
+Enjoy our authentic dishes with your family and friends.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="menu">
+
+<h2 class="title">Our Menu</h2>
+
+<div class="menu">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80">
+<h3>Chicken Burger</h3>
+<p>Juicy grilled chicken burger with cheese.</p>
+<div class="price">₹199</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80">
+<h3>Pizza</h3>
+<p>Hot cheesy pizza with fresh toppings.</p>
+<div class="price">₹349</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1604908176997-4312e2f0d6f6?auto=format&fit=crop&w=800&q=80">
+<h3>Biryani</h3>
+<p>Traditional spicy chicken biryani.</p>
+<div class="price">₹249</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=80">
+<h3>Dessert</h3>
+<p>Sweet chocolate cake with cream.</p>
+<div class="price">₹149</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="title">Contact Us</h2>
+
+<div class="contact">
+
+<input type="text" placeholder="Your Name"><br>
+
+<input type="email" placeholder="Your Email"><br>
+
+<textarea rows="5" placeholder="Message"></textarea><br>
+
+<button class="btn" onclick="sendMessage()">Send Message</button>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>Hour Choice Restaurant</h3>
+
+<p>📍 Chennai, Tamil Nadu</p>
+
+<p>📞 +91 98765 43210</p>
+
+<p>© 2026 Hour Choice Restaurant. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+function welcome(){
+alert("Welcome to Hour Choice Restaurant! Your table booking request has been received.");
+}
+
+function sendMessage(){
+alert("Thank you! Your message has been sent successfully.");
+}
+</script>
+
+</body>
+</html>
